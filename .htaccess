@@ -1,0 +1,49 @@
+# Proyección del Mito Personal — Apache config para Hostinger
+
+# UTF-8 por default
+AddDefaultCharset UTF-8
+
+# MIME types
+AddType image/svg+xml .svg
+AddType application/javascript .js
+AddType text/css .css
+
+# Compresión
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml text/plain
+</IfModule>
+
+# Cache: estáticos un año, HTML siempre fresco
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Forzar HTTPS
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 404 al index si la ruta no existe (404 limpio, single page)
+ErrorDocument 404 /index.html
+
+# Bloquear archivos sensibles
+<FilesMatch "(\.gitignore|\.git|package\.json|\.htaccess)$">
+  Require all denied
+</FilesMatch>
+
+# Headers de seguridad básicos
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

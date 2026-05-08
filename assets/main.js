@@ -201,7 +201,7 @@ function boot() {
   // Reveal each section's children on scroll
   gsap.utils.toArray('.section').forEach((section) => {
     const targets = section.querySelectorAll(
-      '.eyebrow, .section__title, .section__lede, .prose, .movements, .voices, .effects, .prose--coda, .bio, .videos, .cta__title, .cta__lede, .cta__actions'
+      '.eyebrow, .section__title, .section__lede, .prose, .movements, .voices, .effects, .prose--coda, .bio, .videos, .readings, .cta__title, .cta__lede, .cta__actions'
     );
     if (!targets.length) return;
     gsap.from(targets, {
@@ -228,6 +228,20 @@ function boot() {
     scrollTrigger: {
       trigger: '.section--movements',
       start: 'top 70%',
+      once: true
+    }
+  });
+
+  // Readings: subtle stagger
+  gsap.from('.reading', {
+    opacity: 0,
+    y: 24,
+    duration: 0.85,
+    ease: 'power2.out',
+    stagger: 0.14,
+    scrollTrigger: {
+      trigger: '.section--readings .readings',
+      start: 'top 80%',
       once: true
     }
   });

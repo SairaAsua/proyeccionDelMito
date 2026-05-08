@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#0E0B2E"/>
+  <path d="M32 32 m-1 0 a1 1 0 1 1 2 0 a1 1 0 1 1 -2 0" stroke="#5BBF9C" stroke-width="1.5" fill="none"/>
+  <path d="M32 32
+           m0 -3
+           a3 3 0 1 1 0 6
+           a4 4 0 1 1 0 -8
+           a5 5 0 1 1 0 10
+           a7 7 0 1 1 0 -14
+           a9 9 0 1 1 0 18
+           a12 12 0 1 1 0 -24
+           a16 16 0 1 1 0 32
+           a21 21 0 1 1 0 -42"
+        stroke="#BFB0FF"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        fill="none"
+        opacity="0.95"/>
+  <circle cx="32" cy="32" r="2" fill="#5BBF9C"/>
+</svg>

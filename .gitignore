@@ -1,0 +1,13 @@
+# Source materials (no se deployan)
+contenido.txt
+Material Teórico Curso Proyección del Mito Personal.txt
+Textos para la web.pdf
+
+# Foto original con nombre de Telegram (usar julian.jpg)
+photo_5184034224040774679_y.jpg
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*~

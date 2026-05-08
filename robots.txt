@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Disallow: /Material Teórico Curso Proyección del Mito Personal.txt
+Disallow: /contenido.txt

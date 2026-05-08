@@ -1,351 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Proyección del Mito Personal — Julián de la Reta</title>
-<meta name="description" content="Una técnica terapéutica y de autoconocimiento profundo. Descender hasta el Sí Mismo a través de la imaginación activa guiada." />
-<meta name="theme-color" content="#1a1325" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyección del Mito Personal · Julián de la Reta</title>
+  <meta name="description" content="Una técnica terapéutica de autoconocimiento profundo en conjunción con el Harmonic Beacon. Por Julián Manuel de la Reta · AlterMundi.">
+  <meta property="og:title" content="Proyección del Mito Personal — Julián de la Reta">
+  <meta property="og:description" content="Un mensaje de tus profundidades. Una técnica terapéutica en conjunción con el Harmonic Beacon.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="julian.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0E0B2E">
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        serif: ['"Cormorant Garamond"', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      },
-      colors: {
-        surface: { 50: '#FDF8F0', 100: '#F5EFE4', 200: '#E8DFD0' },
-        depth:   { 300: '#9B8FB5', 400: '#7A6E99', 500: '#5D4F7A', 600: '#453A5E', 700: '#2E2440', 800: '#1E172B', 900: '#140F1E' },
-        gold:    { 100: '#F2E6C7', 200: '#E6D09E', 300: '#D4B876', 400: '#C4A35A', 500: '#A6843C' },
-        warm:    { 50: '#FFF8F0', 100: '#FFECD6', 200: '#FFD6A5' },
-      },
-    },
-  },
-};
-</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
+<body>
 
-<body class="font-sans antialiased text-surface-100 bg-depth-900 selection:bg-gold-300 selection:text-depth-900">
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <canvas class="spiral spiral--hero" aria-hidden="true"></canvas>
+    <div class="hero__content">
+      <p class="eyebrow">Un mensaje de tus profundidades</p>
+      <h1 class="hero__title">Proyección del<br><em>Mito Personal</em></h1>
+      <p class="hero__lede">Una técnica terapéutica y de autoconocimiento profundo en conjunción con el campo armónico del Harmonic&nbsp;Beacon.</p>
+      <a class="scroll-cue" href="#manifiesto">↓&nbsp;&nbsp;descender</a>
+    </div>
+  </section>
 
-<!-- Canvas de partículas -->
-<canvas id="dust-canvas" class="fixed inset-0 z-0 pointer-events-none"></canvas>
+  <!-- ==================== MANIFIESTO ==================== -->
+  <section id="manifiesto" class="section section--prose">
+    <p class="eyebrow">La técnica</p>
+    <h2 class="section__title">Una parte de vos que no habla<br>con palabras. Habla en imágenes.</h2>
+    <div class="prose">
+      <p>La <em>Proyección del Mito Personal</em> es una técnica que desarrollé hace más de dieciséis años. Cruza la Imaginación Activa de Carl Gustav Jung, la primera parte del Monomito del Héroe de Joseph Campbell, herramientas de Psicodrama y la función trascendente de la psique.</p>
+      <p>Durante una sesión, desde un estado de relajación y atención flotante, surge un flujo espontáneo de imágenes, sensaciones y símbolos propios. Estos forman una narrativa viva: <em>tu mito personal</em>, un mensaje codificado que proviene directamente de tu Sí&nbsp;Mismo —esa parte profunda y atemporal que se encuentra a la vez dentro y fuera.</p>
+    </div>
+  </section>
 
-<!-- Indicador de profundidad -->
-<div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity" id="depth-gauge">
-  <span class="text-[10px] tracking-[0.3em] uppercase text-gold-200/60 font-sans writing-vertical">Superficie</span>
-  <div class="w-px h-24 bg-gradient-to-b from-gold-200/40 via-gold-200/20 to-transparent relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full bg-gold-300 transition-all duration-300" id="depth-bar" style="height: 0%"></div>
-  </div>
-  <span class="text-[10px] tracking-[0.3em] uppercase text-gold-200/60 font-sans writing-vertical">Sí Mismo</span>
-</div>
+  <!-- ==================== TRES MOVIMIENTOS ==================== -->
+  <section class="section section--movements">
+    <p class="eyebrow">El método</p>
+    <h2 class="section__title">Tres movimientos<br>de un mismo viaje.</h2>
+    <p class="section__lede">Campbell describió el viaje del héroe en un arco de partida, descenso y retorno. La sesión se desplegará en esa misma forma, adaptada a tu propio inconsciente, a tu propio paisaje interior.</p>
+    <div class="movements">
 
-<!-- =================== SUPERFICIE =================== -->
-<section id="surface" class="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden z-10">
-  <!-- Fondo degradado suave -->
-  <div class="absolute inset-0 bg-gradient-to-b from-surface-50 via-surface-100 to-surface-200"></div>
-  
-  <!-- Luz dorada difusa -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gold-200/30 rounded-full blur-[120px]"></div>
-  
-  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-    <p class="text-depth-500 tracking-[0.4em] uppercase text-[11px] md:text-xs font-sans mb-6 opacity-0" id="hero-tag">
-      Cruzando el Tiempo
-    </p>
-    
-    <h1 class="font-serif font-light text-depth-800 text-[13vw] md:text-[96px] leading-[0.9] opacity-0" id="hero-title">
-      <span class="block italic">Proyección</span>
-      <span class="block">del Mito</span>
-      <span class="block italic text-gold-500">Personal</span>
-    </h1>
-    
-    <p class="mt-8 font-serif italic text-xl md:text-2xl text-depth-600 max-w-xl mx-auto opacity-0" id="hero-sub">
-      Descender hasta el Sí Mismo a través de la imaginación activa guiada
-    </p>
-    
-    <div class="mt-16 flex flex-col items-center gap-3 opacity-0" id="hero-cta">
-      <a href="#descent" class="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-depth-400/30 text-depth-700 text-xs tracking-[0.2em] uppercase hover:bg-depth-800 hover:text-surface-100 hover:border-depth-800 transition-all duration-700">
-        Comenzar el descenso
-        <svg class="w-4 h-4 transition-transform group-hover:translate-y-1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      <article class="movement">
+        <canvas class="spiral spiral--movement" data-turns="2" data-direction="in" aria-hidden="true"></canvas>
+        <p class="movement__num">I.</p>
+        <h3 class="movement__title">El llamado</h3>
+        <p class="movement__body">Una pregunta se prepara. La atención se vuelve flotante. Se crea un espacio seguro en el cual el inconsciente pueda hablar con su propia voz. <em>Vera imaginatio</em>: imaginación verdadera, no fantasía.</p>
+      </article>
+
+      <article class="movement">
+        <canvas class="spiral spiral--movement" data-turns="4" data-direction="in" aria-hidden="true"></canvas>
+        <p class="movement__num">II.</p>
+        <h3 class="movement__title">La travesía</h3>
+        <p class="movement__body">Imágenes, sensaciones y símbolos comienzan a desplegarse. Se atraviesa el umbral, se desciende, se encuentra al guardián, se trabaja con la Sombra. El mito se vive — no se interpreta todavía.</p>
+      </article>
+
+      <article class="movement">
+        <canvas class="spiral spiral--movement" data-turns="3" data-direction="out" aria-hidden="true"></canvas>
+        <p class="movement__num">III.</p>
+        <h3 class="movement__title">El retorno</h3>
+        <p class="movement__body">La experiencia queda registrada en audio. Recibís luego un material escrito y visual para volver a escucharte y a leerte desde otro nivel de conciencia. La integración continúa después.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==================== LINAJE ==================== -->
+  <section class="section section--lineage">
+    <p class="eyebrow">Linaje</p>
+    <h2 class="section__title">Cuatro voces<br>en una misma escucha.</h2>
+
+    <div class="voices">
+
+      <article class="voice">
+        <h3 class="voice__name">Carl Gustav Jung</h3>
+        <p class="voice__concepts">Imaginación Activa · Sí Mismo · Sombra · Función Trascendente</p>
+        <blockquote class="voice__quote">«Quien mira hacia afuera sueña; quien mira hacia adentro despierta.»</blockquote>
+      </article>
+
+      <article class="voice">
+        <h3 class="voice__name">Joseph Campbell</h3>
+        <p class="voice__concepts">Monomito del héroe · llamado · umbral · descenso</p>
+        <blockquote class="voice__quote">«La cueva en la que temés entrar guarda el tesoro que buscás.»</blockquote>
+      </article>
+
+      <article class="voice">
+        <h3 class="voice__name">Jacob Levy Moreno · Mónica Zuretti</h3>
+        <p class="voice__concepts">Psicodrama · cambio de roles · espontaneidad</p>
+        <blockquote class="voice__quote">«Habitar al otro hasta volver a uno mismo más completo.»</blockquote>
+      </article>
+
+      <article class="voice">
+        <h3 class="voice__name">Marie-Louise von Franz</h3>
+        <p class="voice__concepts">Símbolo · sincronicidad · individuación</p>
+        <blockquote class="voice__quote">«El alma habla por imágenes antes que por conceptos.»</blockquote>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONJUNCIÓN ==================== -->
+  <section class="section section--conjunction">
+    <p class="eyebrow">La conjunción</p>
+    <h2 class="section__title">Donde el campo<br>encuentra al mito.</h2>
+    <div class="prose">
+      <p>Por una hermosa sincronicidad, esta técnica se encontró con el <a href="https://beacon.altermundi.net/" target="_blank" rel="noopener">Harmonic&nbsp;Beacon</a>. Ambos se ensamblaron de manera natural y potente. El Beacon genera un campo armónico sostenido que actúa como referencia armónica externa, reforzando la misma referencia armónica interior que representa el Sí&nbsp;Mismo.</p>
+    </div>
+
+    <ul class="effects">
+      <li>Hace más nítida la señal que viene del inconsciente.</li>
+      <li>Refuerza la función trascendente: el puente natural entre inconsciente y consciente.</li>
+      <li>Facilita el acceso a capas más profundas, permitiendo ver más allá de las resistencias habituales.</li>
+      <li>Ilumina y ayuda a atravesar la Sombra con mayor fluidez y seguridad.</li>
+      <li>Da sentido y dirección clara a la búsqueda hacia las profundidades de la persona.</li>
+    </ul>
+
+    <div class="prose prose--coda">
+      <p><em>Cuando se realiza la Proyección del Mito junto al Harmonic&nbsp;Beacon encendido, el campo armónico sostenido actúa como un ancla estable que permite al mito personal desplegarse con mayor claridad y fuerza sanadora.</em></p>
+    </div>
+  </section>
+
+  <!-- ==================== QUIÉN SOY ==================== -->
+  <section class="section section--bio">
+    <p class="eyebrow">Quién soy</p>
+    <div class="bio">
+      <div class="bio__portrait">
+        <div class="halo"></div>
+        <img src="julian.jpg" alt="Retrato de Julián Manuel de la Reta" loading="lazy">
+      </div>
+      <div class="bio__text">
+        <h2 class="bio__name">Julián Manuel<br>de la Reta</h2>
+        <p class="bio__role">Psicólogo · Investigador · Guía de almas</p>
+        <p>Soy investigador de AlterMundi, creador de la Técnica de la Proyección del Mito Personal y responsable de la línea de pruebas clínicas y terapéuticas del Harmonic&nbsp;Beacon.</p>
+        <p>La <em>Proyección del Mito Personal</em> nace de más de dieciséis años de experimentación personal con la intuición y la espiritualidad, posteriormente enriquecida con el estudio riguroso de Jung, Campbell, Mónica Zuretti, Jacob Levy Moreno y Marie-Louise von Franz, entre otros.</p>
+        <p>Mi enfoque combina rigor teórico, experiencia clínica y el compromiso de poner herramientas potentes al servicio del proceso de individuación de cada persona. Hoy formo parte del equipo de investigación de la Harmonic&nbsp;Information&nbsp;Theory&nbsp;(HIT), donde desarrollo la vertiente experiencial y terapéutica del Beacon en conjunción con la Proyección del Mito.</p>
+        <p class="bio__instagram"><a href="https://www.instagram.com/cruzandoeltiempo/" target="_blank" rel="noopener">@cruzandoeltiempo</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VIDEOS ==================== -->
+  <section class="section section--videos">
+    <p class="eyebrow">Videos</p>
+    <h2 class="section__title">¿Qué es la Proyección<br>del Mito Personal?</h2>
+    <p class="section__lede">¿Alguna vez sentiste que hay algo dentro tuyo que todavía no terminás de entender? Un bloqueo que se repite. Una decisión que no podés tomar. Una imagen que vuelve.</p>
+
+    <div class="videos">
+      <a class="video video--main" href="https://youtu.be/GX7_lp8r5z0" target="_blank" rel="noopener" aria-label="Ver video principal en YouTube">
+        <img src="https://img.youtube.com/vi/GX7_lp8r5z0/maxresdefault.jpg" alt="Miniatura del video principal" loading="lazy">
+        <span class="video__play" aria-hidden="true">▶</span>
+        <span class="video__label">Video principal</span>
       </a>
-      <p class="text-[10px] tracking-[0.2em] uppercase text-depth-400">Julián Manuel de la Reta</p>
+      <a class="video video--short" href="https://youtube.com/shorts/4uqzfWJgIXY" target="_blank" rel="noopener" aria-label="Ver cápsula breve en YouTube">
+        <img src="https://img.youtube.com/vi/4uqzfWJgIXY/maxresdefault.jpg" alt="Miniatura de la cápsula" loading="lazy">
+        <span class="video__play" aria-hidden="true">▶</span>
+        <span class="video__label">Cápsula breve</span>
+      </a>
     </div>
-  </div>
-  
-  <!-- Indicador de scroll -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
-    <div class="w-px h-12 bg-gradient-to-b from-depth-400 to-transparent"></div>
-  </div>
-</section>
+  </section>
 
-<!-- =================== EL DESCENSO / ESCALERA =================== -->
-<section id="descent" class="relative z-10">
-  
-  <!-- Capa 1: Umbral -->
-  <div class="descent-layer min-h-[120dvh] relative flex items-center justify-center" data-layer="1">
-    <div class="absolute inset-0 bg-gradient-to-b from-surface-200 via-depth-300/20 to-depth-400/30"></div>
-    <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
-      <div class="w-px h-20 mx-auto bg-gradient-to-b from-transparent via-depth-500 to-depth-600 mb-8"></div>
-      <p class="font-display tracking-[0.3em] uppercase text-[10px] text-depth-600 mb-4">Umbral</p>
-      <h2 class="font-serif text-3xl md:text-5xl text-depth-800 italic leading-tight">
-        Todo viaje hacia adentro<br>comienza con un paso
-      </h2>
-      <p class="mt-6 text-depth-700 text-sm md:text-base leading-relaxed font-light">
-        Cruzar el umbral es dejar atrás lo conocido. Es aceptar la invitación del inconsciente a descender.
-      </p>
+  <!-- ==================== CTA ==================== -->
+  <section class="section section--cta">
+    <h2 class="cta__title">¿Empezamos<br>a&nbsp;<em>proyectar</em>?</h2>
+    <p class="cta__lede">Una sesión de aproximadamente una hora y media a dos. Un viaje hacia lo que ya sabés, pero todavía no podés ver.</p>
+    <div class="cta__actions">
+      <a class="btn btn--primary" href="https://calendly.com/juliandelareta/new-meeting" target="_blank" rel="noopener">Agendar una sesión</a>
+      <a class="btn btn--secondary" href="https://wa.me/543547468918" target="_blank" rel="noopener">WhatsApp</a>
     </div>
-  </div>
-  
-  <!-- Capa 2: Pre-consciencia -->
-  <div class="descent-layer min-h-[120dvh] relative flex items-center justify-center" data-layer="2">
-    <div class="absolute inset-0 bg-gradient-to-b from-depth-400/30 via-depth-500/40 to-depth-600/50"></div>
-    <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
-      <div class="w-px h-20 mx-auto bg-gradient-to-b from-depth-500 via-depth-400 to-transparent mb-8"></div>
-      <p class="font-display tracking-[0.3em] uppercase text-[10px] text-depth-300 mb-4">Pre-consciencia</p>
-      <h2 class="font-serif text-3xl md:text-5xl text-surface-100 italic leading-tight">
-        El velo se adelgaza
-      </h2>
-      <p class="mt-6 text-depth-200 text-sm md:text-base leading-relaxed font-light">
-        Aquí los sueños diurnos y las intuiciones comienzan a hablar más alto. Las imágenes brotan como burbujas desde las profundidades.
-      </p>
-    </div>
-  </div>
-  
-  <!-- Escalera visual central -->
-  <div class="relative py-32" id="staircase">
-    <div class="max-w-md mx-auto px-6">
-      <div class="stair-container space-y-2">
-        <!-- Los escalones se generan con CSS -->
-        <div class="stair-step" data-step="1"></div>
-        <div class="stair-step" data-step="2"></div>
-        <div class="stair-step" data-step="3"></div>
-        <div class="stair-step" data-step="4"></div>
-        <div class="stair-step" data-step="5"></div>
-        <div class="stair-step" data-step="6"></div>
-        <div class="stair-step" data-step="7"></div>
-        <div class="stair-step" data-step="8"></div>
-        <div class="stair-step" data-step="9"></div>
-        <div class="stair-step" data-step="10"></div>
-        <div class="stair-step" data-step="11"></div>
-        <div class="stair-step" data-step="12"></div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Capa 3: Inconsciente Personal -->
-  <div class="descent-layer min-h-[120dvh] relative flex items-center justify-center" data-layer="3">
-    <div class="absolute inset-0 bg-gradient-to-b from-depth-600/50 via-depth-700/60 to-depth-800/70"></div>
-    <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
-      <div class="w-px h-20 mx-auto bg-gradient-to-b from-depth-400 to-gold-300/30 mb-8"></div>
-      <p class="font-display tracking-[0.3em] uppercase text-[10px] text-gold-300/60 mb-4">Inconsciente Personal</p>
-      <h2 class="font-serif text-3xl md:text-5xl text-gold-100 italic leading-tight">
-        Lo olvidado espera
-      </h2>
-      <p class="mt-6 text-depth-200 text-sm md:text-base leading-relaxed font-light">
-        Memorias, emociones y complejos depositados en las capas más profundas de la psique. Aquí reside la Sombra, esperando ser reconocida.
-      </p>
-    </div>
-  </div>
-  
-  <!-- Capa 4: Inconsciente Colectivo -->
-  <div class="descent-layer min-h-[120dvh] relative flex items-center justify-center" data-layer="4">
-    <div class="absolute inset-0 bg-gradient-to-b from-depth-800/70 via-depth-900/80 to-[#0c0914]"></div>
-    <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
-      <div class="w-px h-20 mx-auto bg-gradient-to-b from-gold-300/40 to-gold-400/20 mb-8"></div>
-      <p class="font-display tracking-[0.3em] uppercase text-[10px] text-gold-400/60 mb-4">Inconsciente Colectivo</p>
-      <h2 class="font-serif text-3xl md:text-5xl text-gold-200 italic leading-tight">
-        Los arquetipos resuenan
-      </h2>
-      <p class="mt-6 text-depth-300 text-sm md:text-base leading-relaxed font-light">
-        Los mitos ancestrales, los símbolos universales, las figuras que habitan en todos los seres humanos desde siempre.
-      </p>
-    </div>
-  </div>
-  
-</section>
+  </section>
 
-<!-- =================== EL FONDO / SÍ MISMO =================== -->
-<section id="depth" class="relative min-h-[100dvh] z-10 bg-[#0c0914]">
-  <!-- Luz interior cálida -->
-  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-400/10 rounded-full blur-[150px]"></div>
-  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-gold-500/5 to-transparent"></div>
-  
-  <div class="relative z-10 px-6 py-32 md:py-44 max-w-5xl mx-auto">
-    
-    <!-- Llegada -->
-    <div class="text-center mb-32" id="arrival">
-      <div class="inline-block mb-6">
-        <svg class="w-8 h-8 text-gold-400 animate-pulse" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-      </div>
-      <p class="tracking-[0.4em] uppercase text-[10px] text-gold-400/60 font-sans mb-4">Has llegado</p>
-      <h2 class="font-serif text-5xl md:text-7xl text-gold-100 italic leading-[0.95]">
-        El Sí Mismo
-      </h2>
-      <p class="mt-6 font-serif italic text-xl text-gold-200/70 max-w-lg mx-auto">
-        «Lo que llamamos armonía es la forma más eficiente en que la materia y la información se organizan a sí mismas.»
-      </p>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="https://www.instagram.com/cruzandoeltiempo/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://youtu.be/GX7_lp8r5z0" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://beacon.altermundi.net/" target="_blank" rel="noopener">Harmonic Beacon</a>
+      <a href="https://hit.altermundi.net" target="_blank" rel="noopener">HIT</a>
+      <a href="https://altermundi.net" target="_blank" rel="noopener">AlterMundi</a>
     </div>
-    
-    <!-- Quién soy -->
-    <div class="grid md:grid-cols-2 gap-16 md:gap-24 mb-32" id="about">
-      <div>
-        <p class="tracking-[0.3em] uppercase text-[10px] text-gold-400/60 font-sans mb-6">Quién soy</p>
-        <h3 class="font-serif text-3xl md:text-4xl text-gold-100 mb-8 leading-tight">
-          Julián Manuel<br>de la Reta
-        </h3>
-        <div class="space-y-4 text-depth-200 text-[15px] leading-[1.8] font-light">
-          <p>
-            Soy investigador de <strong class="text-gold-200 font-normal">AlterMundi</strong>, creador de la <strong class="text-gold-200 font-normal">Técnica de la Proyección del Mito Personal</strong> y responsable de la línea de pruebas clínicas y terapéuticas del <strong class="text-gold-200 font-normal">Harmonic Beacon</strong>.
-          </p>
-          <p>
-            Mi trabajo nace de más de <strong class="text-gold-200 font-normal">16 años de experimentación personal</strong> con la intuición y la espiritualidad, posteriormente enriquecido con el estudio riguroso de Carl Gustav Jung, Joseph Campbell, Mónica Zuretti, Jacob Levy Moreno y Marie-Louise von Franz, entre otros.
-          </p>
-          <p>
-            Formo parte del equipo de investigación de <strong class="text-gold-200 font-normal">Harmonic Information Theory (HIT)</strong> de AlterMundi, donde desarrollo la vertiente experiencial y terapéutica del Beacon en conjunción con la Proyección del Mito Personal.
-          </p>
-        </div>
-      </div>
-      <div class="flex items-center justify-center">
-        <div class="w-full aspect-[3/4] rounded-2xl bg-gradient-to-br from-depth-700 via-depth-800 to-depth-900 border border-gold-400/10 flex items-center justify-center relative overflow-hidden">
-          <div class="absolute inset-0 bg-gradient-to-t from-gold-400/5 to-transparent"></div>
-          <div class="text-center p-8">
-            <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gold-300/20 via-gold-400/10 to-transparent border border-gold-400/20 flex items-center justify-center mb-6">
-              <span class="font-serif text-4xl text-gold-300 italic">J</span>
-            </div>
-            <p class="font-serif italic text-gold-200/60 text-sm">Psicólogo · Investigador<br>Guía de almas</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Proyección del Mito Personal -->
-    <div class="mb-32" id="technique">
-      <div class="max-w-3xl mx-auto">
-        <p class="tracking-[0.3em] uppercase text-[10px] text-gold-400/60 font-sans mb-6 text-center">La técnica</p>
-        <h3 class="font-serif text-4xl md:text-5xl text-gold-100 mb-12 text-center leading-tight italic">
-          Proyección del<br>Mito Personal
-        </h3>
-        
-        <div class="space-y-6 text-depth-200 text-[15px] leading-[1.8] font-light mb-12">
-          <p>
-            La Proyección del Mito Personal es una técnica terapéutica y de autoconocimiento profundo que desarrollé hace más de 16 años. Se basa en la <strong class="text-gold-200 font-normal">Imaginación Activa</strong> de Carl Gustav Jung, la primera parte del <strong class="text-gold-200 font-normal">Monomito del Héroe</strong> de Joseph Campbell, herramientas de <strong class="text-gold-200 font-normal">Psicodrama</strong> y la <strong class="text-gold-200 font-normal">función trascendente</strong> de la psique.
-          </p>
-          <p>
-            Durante una sesión de aproximadamente una hora y media a dos, se guía a la persona —desde un estado de relajación y atención flotante— para que surja espontáneamente un flujo de imágenes, sensaciones y símbolos propios. Estos forman una narrativa viva: <em class="text-gold-200">tu mito personal</em>, un mensaje codificado que proviene directamente de tu Sí Mismo.
-          </p>
-        </div>
-        
-        <!-- Beneficios con Beacon -->
-        <div class="bg-gradient-to-br from-depth-800/50 to-depth-900/50 rounded-2xl border border-gold-400/10 p-8 md:p-10">
-          <p class="tracking-[0.3em] uppercase text-[10px] text-gold-400/60 font-sans mb-6">Harmonic Beacon + Mito</p>
-          <p class="text-depth-200 text-[15px] leading-[1.8] font-light mb-6">
-            Por una hermosa sincronicidad, esta técnica se encontró con el <strong class="text-gold-200 font-normal">Harmonic Beacon</strong> y ambos se ensamblaron de manera natural y potente. El Beacon genera un campo armónico sostenido que actúa como referencia armónica externa, reforzando la misma referencia armónica interior que representa el Sí Mismo.
-          </p>
-          <ul class="space-y-3 text-depth-200 text-sm">
-            <li class="flex items-start gap-3">
-              <span class="w-1 h-1 rounded-full bg-gold-400 mt-2 shrink-0"></span>
-              <span>Hace más nítida la "señal" que viene del inconsciente.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1 h-1 rounded-full bg-gold-400 mt-2 shrink-0"></span>
-              <span>Refuerza la función trascendente de la psique.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1 h-1 rounded-full bg-gold-400 mt-2 shrink-0"></span>
-              <span>Facilita el acceso a capas más profundas, permitiendo "ver más allá" de las resistencias habituales.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-1 h-1 rounded-full bg-gold-400 mt-2 shrink-0"></span>
-              <span>Ilumina y ayuda a atravesar la Sombra con mayor fluidez y seguridad.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <!-- La sesión -->
-    <div class="mb-32" id="session">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="tracking-[0.3em] uppercase text-[10px] text-gold-400/60 font-sans mb-6">La experiencia</p>
-        <h3 class="font-serif text-3xl md:text-4xl text-gold-100 mb-8 italic">Cómo es una sesión</h3>
-        <div class="grid md:grid-cols-3 gap-8 text-left">
-          <div class="bg-depth-800/30 rounded-xl border border-gold-400/5 p-6">
-            <div class="text-gold-400 font-serif text-3xl mb-3 italic">01</div>
-            <h4 class="text-gold-200 font-serif text-lg mb-2">Preparación</h4>
-            <p class="text-depth-300 text-sm leading-relaxed">Relajación y atención flotante. Se crea un espacio seguro para que el inconsciente pueda hablar.</p>
-          </div>
-          <div class="bg-depth-800/30 rounded-xl border border-gold-400/5 p-6">
-            <div class="text-gold-400 font-serif text-3xl mb-3 italic">02</div>
-            <h4 class="text-gold-200 font-serif text-lg mb-2">El Viaje</h4>
-            <p class="text-depth-300 text-sm leading-relaxed">Guía dialogal para que surjan imágenes, sensaciones y símbolos propios. El mito se despliega.</p>
-          </div>
-          <div class="bg-depth-800/30 rounded-xl border border-gold-400/5 p-6">
-            <div class="text-gold-400 font-serif text-3xl mb-3 italic">03</div>
-            <h4 class="text-gold-200 font-serif text-lg mb-2">Integración</h4>
-            <p class="text-depth-300 text-sm leading-relaxed">La experiencia queda registrada en audio. Recibís material escrito y visual para volver a escucharte desde otro nivel de conciencia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- CTA / Contacto -->
-    <div class="text-center" id="contact">
-      <div class="inline-block w-px h-16 bg-gradient-to-b from-gold-400/40 to-transparent mb-8"></div>
-      <p class="tracking-[0.3em] uppercase text-[10px] text-gold-400/60 font-sans mb-6">¿Listo para descender?</p>
-      <h3 class="font-serif text-3xl md:text-4xl text-gold-100 mb-6 italic">Vivenciar un mito que surge<br>de tus profundidades</h3>
-      
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-        <a href="https://wa.me/5493510000000" target="_blank" rel="noopener" class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gold-400 text-depth-900 text-xs tracking-[0.2em] uppercase font-medium hover:bg-gold-300 transition-colors">
-          Consulta inicial
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@proyecciondeunmitopersonal" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-gold-400/20 text-gold-200 text-xs tracking-[0.2em] uppercase hover:bg-gold-400/10 transition-colors">
-          Ver en YouTube
-        </a>
-      </div>
-      
-      <div class="mt-16 flex items-center justify-center gap-6">
-        <a href="https://www.instagram.com/cruzandoeltiempo/" target="_blank" rel="noopener" class="text-depth-400 hover:text-gold-300 transition-colors">
-          <span class="sr-only">Instagram</span>
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/cruzandoeltiempo" target="_blank" rel="noopener" class="text-depth-400 hover:text-gold-300 transition-colors">
-          <span class="sr-only">Facebook</span>
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@proyecciondeunmitopersonal" target="_blank" rel="noopener" class="text-depth-400 hover:text-gold-300 transition-colors">
-          <span class="sr-only">YouTube</span>
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-      </div>
-    </div>
-    
-  </div>
-</section>
+    <p class="footer__copy">© 2026 Julián de la Reta · Proyección del Mito Personal<br>Práctica clínica integrada al equipo de HIT · AlterMundi</p>
+  </footer>
 
-<!-- Footer -->
-<footer class="relative z-10 bg-[#0c0914] border-t border-gold-400/5 py-8">
-  <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-[11px] tracking-[0.15em] uppercase text-depth-500">
-      © 2026 Julián de la Reta · Proyección del Mito Personal
-    </p>
-    <p class="text-[11px] tracking-[0.15em] uppercase text-depth-500">
-      Un proyecto de <a href="https://altermundi.net" target="_blank" class="text-gold-400/60 hover:text-gold-300 transition-colors">AlterMundi</a>
-    </p>
-  </div>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="./assets/main.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/main.js" defer></script>
 </body>
 </html>

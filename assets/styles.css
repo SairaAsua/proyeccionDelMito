@@ -735,6 +735,90 @@ a:hover { color: var(--viriditas-soft); }
 }
 
 /* ==========================================================================
+   WHATSAPP FLOTANTE
+   ========================================================================== */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--viriditas);
+  color: var(--night);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  box-shadow:
+    0 6px 24px rgba(91, 191, 156, 0.32),
+    0 0 0 0 rgba(91, 191, 156, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  animation: wa-pulse 2.6s ease-in-out infinite;
+}
+.whatsapp-floating:hover {
+  transform: scale(1.08);
+  background: var(--viriditas-soft);
+  color: var(--night);
+  box-shadow: 0 8px 32px rgba(91, 191, 156, 0.5);
+}
+.whatsapp-floating svg {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-floating__tooltip {
+  position: absolute;
+  right: calc(100% + 0.7rem);
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  background: var(--night);
+  color: var(--bone);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.55rem 0.9rem;
+  border-radius: 3px;
+  border: 1px solid rgba(191, 176, 255, 0.2);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.whatsapp-floating:hover .whatsapp-floating__tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@keyframes wa-pulse {
+  0%, 100% {
+    box-shadow: 0 6px 24px rgba(91, 191, 156, 0.32), 0 0 0 0 rgba(91, 191, 156, 0.45);
+  }
+  50% {
+    box-shadow: 0 6px 24px rgba(91, 191, 156, 0.32), 0 0 0 16px rgba(91, 191, 156, 0);
+  }
+}
+
+@media (max-width: 520px) {
+  .whatsapp-floating {
+    width: 52px;
+    height: 52px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .whatsapp-floating svg {
+    width: 26px;
+    height: 26px;
+  }
+  .whatsapp-floating__tooltip { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-floating { animation: none; }
+}
+
+/* ==========================================================================
    ANIMATION INITIAL STATES (avoid FOUC before GSAP)
    ========================================================================== */
 .js-anim-init {
